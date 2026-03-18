@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "persian-encoder"
+version = "0.1.0"
+description = "Custom Persian text encoder/decoder with SQLite dictionary"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = []
+
+[project.scripts]
+persian-encoder = "persian_encoder.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["persian_encoder*"]
+
+[tool.setuptools.package-data]
+persian_encoder = ["data/*.tsv", "data/*.txt"]
